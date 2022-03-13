@@ -4,7 +4,7 @@ local enemy = require("enemy")
 local ball = require("ball")
 
 function love.load()
-	enemy:load(ball)
+	enemy:load(ball) -- we pass ball object to enemy file as an argument
 end
 
 function love.draw()
