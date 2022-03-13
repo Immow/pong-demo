@@ -15,7 +15,7 @@ function Enemy:draw()
 end
 
 function Enemy:movement(dt)
-	self.y = ball.y - self.height / 2
+	self.y = (ball.y + ball.height / 2) - self.height / 2 -- center the enemy paddle on the ball
 end
 
 function Enemy:getObject(object)

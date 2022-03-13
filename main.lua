@@ -14,7 +14,7 @@ function love.draw()
 end
 
 function love.update(dt)
-	player:update(dt) -- we pass the stuff from main.lua to player, in this case the dt value
-	enemy:update(dt)
+	player:update(dt) -- we pass dt to player as an argument, dt is just a number that smooths "things" between different computers
+	enemy:update(dt) -- so my ball moves at the same speed as your ball kinda deal :)
 	ball:update(dt)
 end
