@@ -1,7 +1,7 @@
 local Enemy = {}
 Enemy.width = 30
 Enemy.height = 150
-Enemy.x = 0 -- center the Enemy on screen at start
+Enemy.x = 0
 Enemy.y = WINDOW_HEIGHT / 2 - Enemy.height / 2 -- center the Enemy on screen at start
 Enemy.speed = 200
 local ball = {}
@@ -16,10 +16,6 @@ end
 
 function Enemy:movement(dt)
 	self.y = (ball.y + ball.height / 2) - self.height / 2 -- center the enemy paddle on the ball
-end
-
-function Enemy:getObject(object)
-	return object
 end
 
 function Enemy:stayInWindow()
