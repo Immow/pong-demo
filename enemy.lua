@@ -14,7 +14,7 @@ function Enemy:draw()
 	love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
 end
 
-function Enemy:movement(dt)
+function Enemy:movement()
 	self.y = (ball.y + ball.height / 2) - self.height / 2 -- center the enemy paddle on the ball
 end
 
@@ -29,7 +29,7 @@ function Enemy:stayInWindow()
 end
 
 function Enemy:update(dt)
-	self:movement(dt)
+	self:movement()
 	self:stayInWindow()
 end
 
